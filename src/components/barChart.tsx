@@ -1,23 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import data from '../data.json';
 
 export const BarChart = () => {
 	const [maxHeight, setMaxHeight] = useState(0);
 	const [active, setActive] = useState(-1);
 
-	const showActiveBar = (i: number) => {
+	useEffect(() => {
+		data.forEach(item => {
+			if (item.amount > maxHeight) {
+				setMaxHeight(item.amount);
+			}
+		});
+	}, [maxHeight]);
+
+	const handleActiveBar = (i: number) => {
 		setActive(i);
 	};
-
-	const hideActiveBar = () => {
-		setActive(-1);
-	};
-
-	data.forEach(item => {
-		if (item.amount > maxHeight) {
-			setMaxHeight(item.amount);
-		}
-	});
 
 	const dynamicStyles = (amount: number) => {
 		return { height: (amount / maxHeight) * 100 + '%' };
@@ -46,8 +44,8 @@ export const BarChart = () => {
 							className={`rounded w-9/12 h-full hover:opacity-70${
 								item.amount === maxHeight ? ' bg-primary-cyan' : ' bg-soft-red '
 							}`}
-							onMouseEnter={() => showActiveBar(i)}
-							onMouseLeave={() => hideActiveBar()}
+							onMouseEnter={() => handleActiveBar(i)}
+							onMouseLeave={() => handleActiveBar(-1)}
 						></div>
 						<p>{item.day}</p>
 					</div>
