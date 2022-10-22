@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/expense-chart-with-react-and-tailwind-Q5z2UN9jyz)
-- Live Site URL: [Live Site URL](https://jfa-expense-chart.netlify.app/)
+- Live Site URL: [Live Site URL](https://expense-chart.justinfowlerart.com/)
 
 ## My process
 
