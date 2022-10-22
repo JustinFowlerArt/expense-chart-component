@@ -7,6 +7,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -27,6 +28,10 @@ Users should be able to:
 ### Screenshot
 
 ![](./design/final-design.png)
+
+### Links
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/expense-chart-with-react-and-tailwind-Q5z2UN9jyz)
+- Live Site URL: [Live Site URL](https://jfa-expense-chart.netlify.app/)
 
 ## My process
 
